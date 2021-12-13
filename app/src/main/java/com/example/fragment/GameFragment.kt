@@ -46,9 +46,6 @@ class GameFragment : Fragment() {
     private var questionIndex = 0
     private val numQuestions = Math.min((questions.size + 1) / 2, 3)
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

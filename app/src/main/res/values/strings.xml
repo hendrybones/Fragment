@@ -5,4 +5,6 @@
     <string name="submit">submit button</string>
     <string name="try_again">Try Again?</string>
     <string name="title_android_trivia_question">Android Trivia (%1$d/%2$d)</string>
+    <string name="about_screen">"about "</string>
+
 </resources>

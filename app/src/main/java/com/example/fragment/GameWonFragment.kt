@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.fragment.databinding.FragmentGameWonBinding
@@ -25,8 +26,11 @@ class GameWonFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding:FragmentGameWonBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_game_won,container,false)
         binding.nextMatchButton.setOnClickListener { view:View ->
-            view.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
+            view.findNavController().navigate(GameOverFragmentDirections.actionGameOverFragmentToGameFragment())
         }
+        var args=GameWonFragmentArgs.fromBundle(arguments)
+        Toast.makeText(context,"NumCorrect: ${args.numCorrect},NumQuestions: ${args.numQuestions}",
+        Toast.LENGTH_SHORT).show()
         return binding.root
     }
 
